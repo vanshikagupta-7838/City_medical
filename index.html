@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Medical Store</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://html2canvas.hertzen.com/dist/html2canvas.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="loading-page">
+        <div class="progress-bar">
+          <div class="black"></div>
+          <div class="white"></div>
+        </div>
+        <div class="text-animation">
+          <h1><span>City Hospital</span> Medical System</h1>
+        </div>
+      </div>
+      <div class="inner-div">
+        <div class="login-page">
+          <div class="form">
+            <h2><span>City Hospital</span> Medical System login</h2>
+            <div>
+              <label for="username">Username : </label>
+              <input type="text" id="username" name="username" />
+            </div>
+            <div>
+              <label for="password">Password : </label>
+              <input type="password" id="password" name="password" />
+            </div>
+            <button class="btn login">Login</button>
+          </div>
+        </div>
+        <div class="dashboard">
+          <div class="header">
+            <h2>City <span>H</span>ospital</h2>
+            <p class="logout">Logout</p>
+          </div>
+          <div class="dashboard-inner">
+            <div class="container">
+              <div class="box">
+                <div class="first">Billing System</div>
+                <div class="second">
+                  You can create bill from here and can add medicines also.
+                </div>
+              </div>
+              <div class="box">
+                <div class="first">Stock Info</div>
+                <div class="second">
+                  Get the Information of the Present Stock of Medicines.
+                </div>
+              </div>
+              <div class="box">
+                <div class="first">Stock Add</div>
+                <div class="second">
+                  Add new stocks of the medicine to the database.
+                </div>
+              </div>
+            </div>
+            <div class="service bill">
+              <button class="btn back">back</button>
+              <h2>Billing System</h2>
+              <div class="bill-form">
+                <select class="select"></select>
+                <input
+                  type="number"
+                  id="qty"
+                  name="qty"
+                  placeholder="Enter Qty per tablet"
+                />
+                <button class="btn add">Add</button>
+                <div class="list" id="list">
+                  <table class="bill-table">
+                    <tr>
+                      <th>S.NO</th>
+                      <th>MEDICINE NAME</th>
+                      <th>QTY <br />(Per Tablet)</th>
+                      <th>PRICE <br />(in Rupees)</th>
+                    </tr>
+                  </table>
+                  <div class="total-div">
+                    <h3>Total</h3>
+                    <h3 class="total">0 Rupees</h3>
+                  </div>
+                </div>
+
+                <div class="btns">
+                  <button class="btn reset">Reset Bill</button>
+                  <button class="btn print-bill">Print Bill</button>
+                  <button class="btn download-bill">Download Bill</button>
+                </div>
+              </div>
+            </div>
+            <div class="service stock-info">
+              <button class="btn back">back</button>
+              <h2>Get Stock Information</h2>
+              <div>
+                <select class="select"></select>
+                <button class="btn get-stock">Get Stock Info</button>
+              </div>
+              <div class="stock-info-result">
+                <table class="stock-info-table">
+                  <tr>
+                    <th>Medicine Name</th>
+                    <th>Total Stock</th>
+                    <th>Available Stock</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="service stock-add">
+              <button class="btn back">back</button>
+              <h2>Add New Stock</h2>
+              <div>
+                <select class="select"></select>
+                <input
+                  type="number"
+                  id="qtytoadd"
+                  name="qtytoadd"
+                  placeholder="Enter Qty per tablet"
+                />
+                <button class="btn add-stock">Add Stock</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
